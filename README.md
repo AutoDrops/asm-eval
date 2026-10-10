@@ -1,5 +1,7 @@
 # Adaptive Semantic Memory: Strong Project-State Results, Mixed Generalization to Long-Term Personal Memory
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23279014.svg)](https://doi.org/10.5281/zenodo.23279014)
+
 Bohdan Chernyshuk, independent researcher, Ukraine. radoautodrops@gmail.com
 
 Evaluation results, scoring rules, a standalone scoring script and a toy demo for ASM, a memory layer for long-running LLM agents. **The ASM implementation is not included.** Preliminary study, not independently reproduced.
@@ -141,4 +143,4 @@ Code in `eval/` is released under the MIT License (`LICENSE`). Data in `data/`, 
 
 ## Citation
 
-Chernyshuk, B. (2026). *Adaptive Semantic Memory: Strong Project-State Results, Mixed Generalization to Long-Term Personal Memory* (preliminary study). https://github.com/AutoDrops/asm-eval, DOI: [ZENODO_DOI]. See `CITATION.cff`.
+Chernyshuk, B. (2026). *Adaptive Semantic Memory: Strong Project-State Results, Mixed Generalization to Long-Term Personal Memory* (preliminary study). https://github.com/AutoDrops/asm-eval, DOI: [10.5281/zenodo.23279014](https://doi.org/10.5281/zenodo.23279014). See `CITATION.cff`.

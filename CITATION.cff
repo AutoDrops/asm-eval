@@ -7,9 +7,9 @@ authors:
     given-names: Bohdan
     affiliation: "Independent researcher, Ukraine"
     email: radoautodrops@gmail.com
-version: "0.1.0"
+version: "1.0.0"
 date-released: "2026-10-10"
-# doi: [ZENODO_DOI]   <- uncomment and fill in after the first Zenodo release (a bracket placeholder is not a valid DOI)
+doi: "10.5281/zenodo.23279014"
 repository-code: "https://github.com/AutoDrops/asm-eval"
 license:
   - MIT
