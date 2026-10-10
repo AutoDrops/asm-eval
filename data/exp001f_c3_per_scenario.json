@@ -1,0 +1,373 @@
+{
+ "source": "internal EXP-001F run logs, aggregated per scenario; correct = correct + justified \"no data\" (grading rule of the report)",
+ "rows": [
+  {
+   "scenario": "c3-01",
+   "method": "asm_gold",
+   "questions": 18,
+   "correct": 16
+  },
+  {
+   "scenario": "c3-01",
+   "method": "asm_new",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-01",
+   "method": "bm25",
+   "questions": 18,
+   "correct": 10
+  },
+  {
+   "scenario": "c3-01",
+   "method": "full_history",
+   "questions": 18,
+   "correct": 13
+  },
+  {
+   "scenario": "c3-01",
+   "method": "llm_summary",
+   "questions": 18,
+   "correct": 10
+  },
+  {
+   "scenario": "c3-02",
+   "method": "asm_gold",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-02",
+   "method": "asm_new",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-02",
+   "method": "bm25",
+   "questions": 18,
+   "correct": 12
+  },
+  {
+   "scenario": "c3-02",
+   "method": "full_history",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-02",
+   "method": "llm_summary",
+   "questions": 18,
+   "correct": 9
+  },
+  {
+   "scenario": "c3-03",
+   "method": "asm_gold",
+   "questions": 18,
+   "correct": 16
+  },
+  {
+   "scenario": "c3-03",
+   "method": "asm_new",
+   "questions": 18,
+   "correct": 16
+  },
+  {
+   "scenario": "c3-03",
+   "method": "bm25",
+   "questions": 18,
+   "correct": 11
+  },
+  {
+   "scenario": "c3-03",
+   "method": "full_history",
+   "questions": 18,
+   "correct": 13
+  },
+  {
+   "scenario": "c3-03",
+   "method": "llm_summary",
+   "questions": 18,
+   "correct": 10
+  },
+  {
+   "scenario": "c3-04",
+   "method": "asm_gold",
+   "questions": 18,
+   "correct": 14
+  },
+  {
+   "scenario": "c3-04",
+   "method": "asm_new",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-04",
+   "method": "bm25",
+   "questions": 18,
+   "correct": 10
+  },
+  {
+   "scenario": "c3-04",
+   "method": "full_history",
+   "questions": 18,
+   "correct": 14
+  },
+  {
+   "scenario": "c3-04",
+   "method": "llm_summary",
+   "questions": 18,
+   "correct": 6
+  },
+  {
+   "scenario": "c3-05",
+   "method": "asm_gold",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-05",
+   "method": "asm_new",
+   "questions": 18,
+   "correct": 16
+  },
+  {
+   "scenario": "c3-05",
+   "method": "bm25",
+   "questions": 18,
+   "correct": 9
+  },
+  {
+   "scenario": "c3-05",
+   "method": "full_history",
+   "questions": 18,
+   "correct": 14
+  },
+  {
+   "scenario": "c3-05",
+   "method": "llm_summary",
+   "questions": 18,
+   "correct": 6
+  },
+  {
+   "scenario": "c3-06",
+   "method": "asm_gold",
+   "questions": 18,
+   "correct": 16
+  },
+  {
+   "scenario": "c3-06",
+   "method": "asm_new",
+   "questions": 18,
+   "correct": 16
+  },
+  {
+   "scenario": "c3-06",
+   "method": "bm25",
+   "questions": 18,
+   "correct": 11
+  },
+  {
+   "scenario": "c3-06",
+   "method": "full_history",
+   "questions": 18,
+   "correct": 14
+  },
+  {
+   "scenario": "c3-06",
+   "method": "llm_summary",
+   "questions": 18,
+   "correct": 7
+  },
+  {
+   "scenario": "c3-07",
+   "method": "asm_gold",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-07",
+   "method": "asm_new",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-07",
+   "method": "bm25",
+   "questions": 18,
+   "correct": 11
+  },
+  {
+   "scenario": "c3-07",
+   "method": "full_history",
+   "questions": 18,
+   "correct": 11
+  },
+  {
+   "scenario": "c3-07",
+   "method": "llm_summary",
+   "questions": 18,
+   "correct": 9
+  },
+  {
+   "scenario": "c3-08",
+   "method": "asm_gold",
+   "questions": 18,
+   "correct": 16
+  },
+  {
+   "scenario": "c3-08",
+   "method": "asm_new",
+   "questions": 18,
+   "correct": 16
+  },
+  {
+   "scenario": "c3-08",
+   "method": "bm25",
+   "questions": 18,
+   "correct": 11
+  },
+  {
+   "scenario": "c3-08",
+   "method": "full_history",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-08",
+   "method": "llm_summary",
+   "questions": 18,
+   "correct": 6
+  },
+  {
+   "scenario": "c3-09",
+   "method": "asm_gold",
+   "questions": 18,
+   "correct": 14
+  },
+  {
+   "scenario": "c3-09",
+   "method": "asm_new",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-09",
+   "method": "bm25",
+   "questions": 18,
+   "correct": 9
+  },
+  {
+   "scenario": "c3-09",
+   "method": "full_history",
+   "questions": 18,
+   "correct": 12
+  },
+  {
+   "scenario": "c3-09",
+   "method": "llm_summary",
+   "questions": 18,
+   "correct": 9
+  },
+  {
+   "scenario": "c3-10",
+   "method": "asm_gold",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-10",
+   "method": "asm_new",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-10",
+   "method": "bm25",
+   "questions": 18,
+   "correct": 9
+  },
+  {
+   "scenario": "c3-10",
+   "method": "full_history",
+   "questions": 18,
+   "correct": 13
+  },
+  {
+   "scenario": "c3-10",
+   "method": "llm_summary",
+   "questions": 18,
+   "correct": 4
+  },
+  {
+   "scenario": "c3-11",
+   "method": "asm_gold",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-11",
+   "method": "asm_new",
+   "questions": 18,
+   "correct": 15
+  },
+  {
+   "scenario": "c3-11",
+   "method": "bm25",
+   "questions": 18,
+   "correct": 9
+  },
+  {
+   "scenario": "c3-11",
+   "method": "full_history",
+   "questions": 18,
+   "correct": 11
+  },
+  {
+   "scenario": "c3-11",
+   "method": "llm_summary",
+   "questions": 18,
+   "correct": 11
+  },
+  {
+   "scenario": "c3-12",
+   "method": "asm_gold",
+   "questions": 18,
+   "correct": 16
+  },
+  {
+   "scenario": "c3-12",
+   "method": "asm_new",
+   "questions": 18,
+   "correct": 16
+  },
+  {
+   "scenario": "c3-12",
+   "method": "bm25",
+   "questions": 18,
+   "correct": 10
+  },
+  {
+   "scenario": "c3-12",
+   "method": "full_history",
+   "questions": 18,
+   "correct": 12
+  },
+  {
+   "scenario": "c3-12",
+   "method": "llm_summary",
+   "questions": 18,
+   "correct": 4
+  }
+ ],
+ "methods": {
+  "asm_new": "ASM v4.2 (frozen), full pipeline",
+  "asm_gold": "diagnostic: ASM context built from a hand-made reference memory (no automatic extraction)",
+  "full_history": "whole dialogue history",
+  "bm25": "BM25 retrieval over dialogue turns",
+  "llm_summary": "running LLM summary"
+ },
+ "scenario_ids": "anonymised (c3-01 .. c3-12); dialogues and questions of c3 are not released"
+}

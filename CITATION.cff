@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use these results or the scoring script, please cite them as below."
+title: "Adaptive Semantic Memory: Strong Project-State Results, Mixed Generalization to Long-Term Personal Memory"
+type: dataset
+authors:
+  - family-names: Chernyshuk
+    given-names: Bohdan
+    affiliation: "Independent researcher, Ukraine"
+    email: radoautodrops@gmail.com
+version: "0.1.0"
+date-released: "2026-10-10"
+# doi: [ZENODO_DOI]   <- uncomment and fill in after the first Zenodo release (a bracket placeholder is not a valid DOI)
+repository-code: "https://github.com/AutoDrops/asm-eval"
+license:
+  - MIT
+  - CC-BY-4.0
+abstract: >-
+  Evaluation results and a standalone scoring script for ASM, a compact state memory for long-running LLM agents
+  (implementation not included). On the internal closed set c3 (216 questions per method) ASM scored 85.6% vs 72.7%
+  for full history with about 12.6x less context. On a 100-question stratified subset of the LongMemEval ORACLE
+  variant (not the official 500-question result) ASM scored 49% vs 58% for BM25 and 66% for full history.
+  Preliminary study, not independently reproduced.
+keywords:
+  - LLM agents
+  - long-term memory
+  - evaluation
+  - LongMemEval
