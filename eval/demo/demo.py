@@ -38,7 +38,12 @@ def mentions(text, value):
 
 def grade(raw, gold):
     try:
-        out = json.loads(raw); answer, source = str(out["answer"]), out.get("source")
+        out = json.loads(raw)
+        if (not isinstance(out, dict) or set(out) != {"answer", "source"}
+                or not isinstance(out["answer"], str)
+                or not (out["source"] is None or isinstance(out["source"], str))):
+            return "format_error"
+        answer, source = out["answer"], out["source"]
     except (ValueError, KeyError, TypeError):
         return "format_error"
     says_unknown = bool(UNKNOWN.search(answer))

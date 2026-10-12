@@ -2,7 +2,9 @@
 
 Bohdan Chernyshuk, independent researcher, Ukraine. radoautodrops@gmail.com. 10 Oct 2026.
 
-Preliminary study. c3 is an internal closed set built by the author; EXP-002 uses a public benchmark subset. Not independently reproduced. The ASM implementation is not part of this report. All numbers can be re-computed with `eval/score.py` from the released data at https://github.com/AutoDrops/asm-eval.
+Preliminary study. c3 is an internal closed set built by the author; EXP-002 uses a public benchmark subset. Not independently reproduced. The ASM implementation is not part of this report. `python3 eval/score.py` reproduces c3 per-method accuracies and paired differences, sign-flip CIs/p-values and scenario counts; LongMemEval subset accuracies, Wilson CIs, mean context estimates, mean per-question evidence recall, paired bootstrap CIs, McNemar p-values, multi-session and abstention counts. c3 marginal bootstrap CIs are independently reproducible from the released scenario counts: use one shared Python RNG seeded 1001, 20,000 draws per method in order ASM / full history / BM25 / summary / diagnostic, sampling 12 scenarios with replacement per draw in sorted scenario order; sort the resulting accuracies and take percentile indices 499 and 19499 (zero-based).
+
+The following are reported from private run logs and are not reproducible from released data: c3 context-token sizes and the inputs to the 12.6x ratio, c3 per-type counts, the decision subset, extraction diagnostics, accounting/retry exclusion and costs.
 
 **EXP-001F - internal closed set c3** (built by the author; 216 questions per method, same Qwen3-235B reader):
 
@@ -44,7 +46,7 @@ ASM keeps a compact, source-linked record of the current state of a conversation
 | BM25 retrieval | 56.5% | 53.2-59.7 | 294 |
 | LLM summary | 42.1% | 34.7-49.1 | 472 |
 
-ASM used about **12.6x less context** than full history (489 vs 6,164 tokens).
+ASM used about **12.6x less context** than full history (489 vs 6,164 tokens), as reported from private run logs; these context measurements are not in the release.
 
 Diagnostic condition: the same reader given ASM-style context built from a hand-made reference memory (no automatic extraction) scored 84.7% (CI 82.4-87.0), 0.9 pp below the full ASM pipeline, so on this set extraction was not the accuracy bottleneck.
 
@@ -56,7 +58,7 @@ Paired differences, ASM minus baseline; exact 95% CI from a sign-flip permutatio
 | BM25 | **+29.2 pp** | +25.6 to +33.3 | 0.00049 | 12 / 0 / 0 |
 | LLM summary | **+43.5 pp** | +34.3 to +52.8 | 0.00049 | 12 / 0 / 0 |
 
-Per question type (correct / n), selected:
+Per question type (correct / n), selected (private run logs; counts not released):
 
 | Question type | ASM v4.2 | Full history | BM25 | LLM summary |
 |---|---|---|---|---|
@@ -77,11 +79,11 @@ Frozen ASM v4.2 on a **100-question stratified subset of the LongMemEval ORACLE 
 | Method | Accuracy (100 q) | 95% CI (Wilson) | Mean context, tokens (chars / 4) | Evidence recall |
 |---|---|---|---|---|
 | Full history | **66%** | 56.3-74.5 | 7,683 | 100% |
-| BM25 retrieval | 58% | 48.2-67.2 | 995 | 78%** |
-| ASM v4.2 | 49% | 39.4-58.7 | 949 | 41% |
+| BM25 retrieval | 58% | 48.2-67.2 | 995 | 77.5% |
+| ASM v4.2 | 49% | 39.4-58.7 | 949 | 40.7% |
 | LLM summary | 49% | 39.4-58.7 | 305 | 0%* |
 
-Evidence recall = share of questions where the answer-bearing turn reached the context (over the 94-95 questions that have one). *The summary rewrites text, so literal-turn recall is zero by construction. **The source report rounds 0.7747 to 78%; recomputed from released data it is 77.5%.
+Evidence recall is mean per-question evidence recall over 95 questions per method with non-null recall fractions. It is not the percentage of questions with any evidence present. *The summary rewrites text, so literal-turn recall is zero by construction; this does not measure semantic coverage.
 
 Paired, ASM minus other (stratified bootstrap, 10,000 repeats; exact McNemar):
 
@@ -91,7 +93,7 @@ Paired, ASM minus other (stratified bootstrap, 10,000 repeats; exact McNemar):
 | ASM - full history | -17 pp | -26 to -8 | 0.0015 |
 | ASM - LLM summary | 0 pp | -10 to +10 | 1.0 |
 
-ASM's weakest type was multi-session (6/27 vs 11/27 BM25 and 17/27 full history). It abstained correctly on 5 of 6 unanswerable questions (too few for a claim). Main loss is at the selection step: the needed turn reached ASM's context in 41% of cases vs 78% for BM25.
+ASM scored 6/27 on multi-session questions, versus 11/27 for BM25 and 17/27 for full history. Its lowest observed type accuracy was single-session-preference (1/6). It abstained correctly on 5 of 6 unanswerable questions (too few for a claim). Mean per-question evidence recall was 40.7% for ASM versus 77.5% for BM25, consistent with evidence selection being a limitation.
 
 Source: `docs/exp002-oracle-report.md`, `results/exp002o/final-analysis.json` (EXP-002 worktree of the private repository).
 

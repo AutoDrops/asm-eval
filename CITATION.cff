@@ -17,9 +17,13 @@ license:
 abstract: >-
   Evaluation results and a standalone scoring script for ASM, a compact state memory for long-running LLM agents
   (implementation not included). On the internal closed set c3 (216 questions per method) ASM scored 85.6% vs 72.7%
-  for full history with about 12.6x less context. On a 100-question stratified subset of the LongMemEval ORACLE
+  for full history with about 12.6x less context (context measurements reported from private run logs,
+  not reproducible from released data). On a 100-question stratified subset of the LongMemEval ORACLE
   variant (not the official 500-question result) ASM scored 49% vs 58% for BM25 and 66% for full history.
-  Preliminary study, not independently reproduced.
+  Preliminary study, not independently reproduced. No LongMemEval dialogues or conversation histories are redistributed;
+  the labels file contains IDs, types and reader answers derived from LongMemEval under MIT,
+  not CC BY 4.0 (see THIRD_PARTY_NOTICES.md). Released labels and scenario counts reproduce the
+  accuracy and paired statistics described in README; private run-log measurements are excluded.
 keywords:
   - LLM agents
   - long-term memory

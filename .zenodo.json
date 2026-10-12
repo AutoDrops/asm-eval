@@ -3,16 +3,34 @@
   "upload_type": "dataset",
   "version": "1.0.0",
   "creators": [
-    {"name": "Chernyshuk, Bohdan"}
+    {
+      "name": "Chernyshuk, Bohdan"
+    }
   ],
-  "description": "<p>Evaluation results, a standalone scoring script and a toy demo for ASM (Adaptive Semantic Memory), a compact state memory for long-running LLM agents. The ASM implementation itself is not included. Author: independent researcher, Ukraine (no institutional affiliation). Preliminary study, not independently reproduced.</p><p><b>EXP-001F, internal closed set c3</b> (built by the author; 12 synthetic scenarios, 216 questions per method, pre-registered, same Qwen3-235B-A22B reader): ASM v4.2 85.6%, full history 72.7%, BM25 56.5%, LLM summary 42.1%; ASM used about 12.6x less context (489 vs 6,164 tokens). Paired difference vs full history +13.0 pp (exact 95% CI +8.4 to +17.8).</p><p><b>EXP-002, LongMemEval ORACLE, 100-question stratified subset</b> (public benchmark; not the official 500-question result; official GPT-4o judge): full history 66%, BM25 58%, ASM v4.2 49%, LLM summary 49%. ASM is weaker than BM25 (-9 pp, 95% CI -17 to -1, McNemar p = 0.064) and full history (-17 pp, p = 0.0015) on long-term personal memory.</p><p>Limitations: internal benchmark built by the author; one reader model; decision questions not clearly better (+2.8 pp, CI includes zero); false-update rate 20.5%; the c3 run is formally flagged for an API-accounting rule (audited: all questions graded).</p><p>Licenses: code in eval/ is MIT; data, report and README text are CC BY 4.0 (see LICENSE in the repository). LongMemEval data is not redistributed.</p>",
+  "description": "<p>Evaluation results, a standalone scoring script and a toy demo for ASM (Adaptive Semantic Memory), a compact state memory for long-running LLM agents. The ASM implementation itself is not included. Author: independent researcher, Ukraine (no institutional affiliation). Preliminary study, not independently reproduced.</p><p><b>EXP-001F, internal closed set c3</b> (built by the author; 12 synthetic scenarios, 216 questions per method, pre-registered, same Qwen3-235B-A22B reader): ASM v4.2 85.6%, full history 72.7%, BM25 56.5%, LLM summary 42.1%; ASM used about 12.6x less context (489 vs 6,164 tokens; private run-log measurements, not reproducible from released data). Paired difference vs full history +13.0 pp (exact 95% CI +8.4 to +17.8).</p><p><b>EXP-002, LongMemEval ORACLE, 100-question stratified subset</b> (public benchmark; not the official 500-question result; official GPT-4o judge): full history 66%, BM25 58%, ASM v4.2 49%, LLM summary 49%. ASM is weaker than BM25 (-9 pp, 95% CI -17 to -1, McNemar p = 0.064) and full history (-17 pp, p = 0.0015) on long-term personal memory.</p><p>Limitations: internal benchmark built by the author; one reader model; decision questions not clearly better (+2.8 pp, CI includes zero); false-update rate 20.5%; the c3 run is formally flagged for an API-accounting rule (audited: all questions graded).</p><p>Licenses: code in eval/ is MIT; our labels, measurements, report and README text are CC BY 4.0 to the extent we hold the rights. No LongMemEval dialogues or conversation histories are redistributed. The labels file contains IDs, types and reader answers derived from LongMemEval under MIT, not CC BY 4.0; see THIRD_PARTY_NOTICES.md.</p>",
   "access_right": "open",
   "license": "cc-by-4.0",
-  "keywords": ["LLM agents", "long-term memory", "agent memory", "evaluation", "LongMemEval", "context compression", "prompt injection"],
+  "keywords": [
+    "LLM agents",
+    "long-term memory",
+    "agent memory",
+    "evaluation",
+    "LongMemEval",
+    "context compression",
+    "prompt injection"
+  ],
   "related_identifiers": [
-    {"identifier": "https://github.com/AutoDrops/asm-eval", "relation": "isSupplementTo", "scheme": "url"},
-    {"identifier": "10.48550/arXiv.2410.10813", "relation": "references", "scheme": "doi"}
+    {
+      "identifier": "https://github.com/AutoDrops/asm-eval",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.48550/arXiv.2410.10813",
+      "relation": "references",
+      "scheme": "doi"
+    }
   ],
   "language": "eng",
-  "notes": "The eval/ code is MIT-licensed; the Zenodo license field covers the data and report (CC BY 4.0)."
+  "notes": "The eval/ code and LongMemEval-derived IDs, types and reader answers are MIT-licensed (see THIRD_PARTY_NOTICES.md); the Zenodo CC BY 4.0 field covers our contributions."
 }

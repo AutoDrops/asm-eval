@@ -52,6 +52,12 @@ def exp002(path):
             rs = [r for r in rows if r["method"] == m and r["question_type"] == t]
             line += f"{sum(r['judge_label'] for r in rs):>9} / {len(rs):<2}"
         print(line)
+    print("\nMulti-session and abstention counts (correct / n):")
+    for m in methods:
+        for label, predicate in (("multi-session", lambda r: r["question_type"] == "multi-session"),
+                                 ("abstention", lambda r: r["abstention"])):
+            rs = [r for r in rows if r["method"] == m and predicate(r)]
+            print(f"  {m:<14} {label:<14} {sum(r['judge_label'] for r in rs)} / {len(rs)}")
     print("\nPaired ASM minus other (stratified bootstrap, 10,000 repeats, seed 2002; exact McNemar):")
     qids = sorted({r["question_id"] for r in rows})
     for other in [m for m in methods if m != "asm"]:
